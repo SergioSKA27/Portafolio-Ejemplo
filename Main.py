@@ -191,6 +191,35 @@ st.markdown('''<style>
   }
 }
 
+
+/* For Android devices or smaller screens */
+@media screen and (max-width: 767px) {
+  .waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 15px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #000;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+}
+
 </style>''', unsafe_allow_html=True)
 
 st.markdown('''<div class="titulo"><h1>Tutorial Basico de Streamlit</h1></div>''', unsafe_allow_html=True)
